@@ -15,7 +15,7 @@ AWS access key used to create infrastructure
 AWS secret key used to create AWS infrastructure
 
 ###### `aws_region`
-- Default: **`"us-east-1"`**
+- Default: **`"us-west-1"`**
 AWS region used for all resources
 
 ###### `prefix`
@@ -59,4 +59,14 @@ See `rancher-common` module variable `rancher_version` for more details.
 Admin password to use for Rancher server bootstrap
 
 See `rancher-common` module variable `admin_password` for more details.
+
+```
+brew install terraform
+ 
+cd aws
+terraform init
+terraform apply -auto-approve
+
+```
+
 
