@@ -15,7 +15,7 @@ AWS access key used to create infrastructure
 AWS secret key used to create AWS infrastructure
 
 ###### `aws_region`
-- Default: **`"us-west-1"`**
+- Default: **`"us-west-2"`**
 AWS region used for all resources
 
 ###### `prefix`
@@ -66,6 +66,7 @@ brew install terraform
 cd aws
 terraform init
 terraform apply -auto-approve
+#terraform destroy -auto-approve
 
 ```
 

@@ -53,6 +53,8 @@ resource "aws_instance" "rancher_server" {
 
   key_name        = aws_key_pair.quickstart_key_pair.key_name
   security_groups = [aws_security_group.rancher_sg_allowall.name]
+//  vpc_security_group_ids=["sg-04fac319fa0f3ba6a","sg-0826cf92b72b3aad2"]
+//  subnet_id="subnet-06c046a7d88ef9408"
 
   user_data = templatefile(
     join("/", [path.module, "../cloud-common/files/userdata_rancher_server.template"]),
@@ -115,6 +117,8 @@ resource "aws_instance" "quickstart_node" {
 
   key_name        = aws_key_pair.quickstart_key_pair.key_name
   security_groups = [aws_security_group.rancher_sg_allowall.name]
+//  vpc_security_group_ids=["sg-04fac319fa0f3ba6a","sg-0826cf92b72b3aad2"]
+//  subnet_id="subnet-06c046a7d88ef9408"
 
   user_data = templatefile(
     join("/", [path.module, "files/userdata_quickstart_node.template"]),
